@@ -27,7 +27,8 @@ Ideal for automating naming conversions in .NET projects, code generation, migra
 * snake_case
 * SCREAMING_SNAKE_CASE
 * kebab-case
-* UPPER-KEBAB-CASE 
+* UPPER-KEBAB-CASE
+* Title Case
 * and mixed cases  
 
 ✔ Correct handling of casing and separators  
