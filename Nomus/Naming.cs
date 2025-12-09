@@ -40,11 +40,11 @@ namespace Nomus
                 return "Title Case";
 
             // lowercase: simple lowercase
-            if (Regex.IsMatch(input, @"^[a-z]+$"))
+            if (Regex.IsMatch(input, @"^[a-z]+$") || Regex.IsMatch(input, @"^[a-z]+(\s[a-z]+)+$"))
                 return "lowercase";
 
-            // uppercase simple: simple uppercase
-            if (Regex.IsMatch(input, @"^[A-Z]+$"))
+            // UPPERCASE: simple uppercase
+            if (Regex.IsMatch(input, @"^[A-Z]+$") || Regex.IsMatch(input, @"^[A-Z]+(\s[A-Z]+)+$"))
                 return "UPPERCASE";
 
             return "Unknown / Mixed";
