@@ -140,5 +140,14 @@ namespace Nomus
                 .Replace(norm, @"\s+", "-")
                 .ToUpper();
         }
+
+        public static string ToTitleCase(string input)
+        {
+            // First, convert to PascalCase
+            string pascal = ToPascalCase(input);
+
+            // Then insert spaces before each capital letter (except the first one)
+            return Regex.Replace(pascal, @"([A-Z][a-z0-9]*)", " $1").TrimStart(' ');
+        }
     }
 }
