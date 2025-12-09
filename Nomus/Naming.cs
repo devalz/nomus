@@ -39,6 +39,10 @@ namespace Nomus
             if (Regex.IsMatch(input, @"^[A-Z][a-z]+(\s[A-Z][a-z]+)*$"))
                 return "Title Case";
 
+            // Train-Case: Words with a capital letter at the beginning, separated by -
+            if (Regex.IsMatch(input, @"^[A-Z][a-z]+(-[A-Z][a-z]+)*$"))
+                return "Train-Case";
+
             // lowercase: simple lowercase
             if (Regex.IsMatch(input, @"^[a-z]+$") || Regex.IsMatch(input, @"^[a-z]+(\s[a-z]+)+$"))
                 return "lowercase";
@@ -148,6 +152,15 @@ namespace Nomus
 
             // Then insert spaces before each capital letter (except the first one)
             return Regex.Replace(pascal, @"([A-Z][a-z0-9]*)", " $1").TrimStart(' ');
+        }
+
+        public static string ToTrainCase(string input)
+        {
+            // First, convert to PascalCase
+            string pascal = ToPascalCase(input);
+
+            // Then insert hyphens before each capital letter(except the first one)
+            return Regex.Replace(pascal, @"([A-Z][a-z0-9]*)", "-$1").TrimStart('-');
         }
     }
 }

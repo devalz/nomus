@@ -10,11 +10,11 @@
 
     <!-- Información del paquete NuGet -->
     <PackageId>Devjavu.Nomus</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.5</Version>
     <Authors>Juan Fernando Alzate</Authors>
     <Company>Devjavu</Company>
     <Description>Nomus is a library that allows you to detect the type of writing and convert it according to the convention you need (camelCase, PascalCase, snake_case, etc.).</Description>
-    <PackageTags>naming;style;camelcase;pascalcase;snakecase;detector</PackageTags>
+    <PackageTags>naming;style;lowercase;uppercase;camelcase;pascalcase;snakecase;screamingsnakecase;kebabcase;upperkebabcase;titlecase;traincase;detector</PackageTags>
     <RepositoryUrl>https://github.com/devalz/nomus</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Title>Nomus</Title>

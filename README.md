@@ -1,6 +1,6 @@
 # 📦 **Nomus**
 
-Easily convert text between different naming styles: **UPPERCCASE, lowercase, PascalCase, camelCase, snake_case, SCREAMING_SNAKE_CASE, kebab-case, UPPER-KEBAB-CASE**, and automatically detect the original format.  
+Easily convert text between different naming styles: **UPPERCCASE, lowercase, PascalCase, camelCase, snake_case, SCREAMING_SNAKE_CASE, kebab-case, UPPER-KEBAB-CASE, Title Case and Train-Case**, and automatically detect the original format.  
 Ideal for automating naming conversions in .NET projects, code generation, migrations, tools, and utilities.
 
 ---
@@ -17,6 +17,8 @@ Ideal for automating naming conversions in .NET projects, code generation, migra
 * **SCREAMING_SNAKE_CASE**
 * **kebab-case**
 * **UPPER-KEBAB-CASE**
+* **Title Case**
+* **Train-Case**
 
 ✔ **Automatically detects**:
 
@@ -29,6 +31,7 @@ Ideal for automating naming conversions in .NET projects, code generation, migra
 * kebab-case
 * UPPER-KEBAB-CASE
 * Title Case
+* Train-Case
 * and mixed cases  
 
 ✔ Correct handling of casing and separators  
@@ -96,6 +99,7 @@ Automatically detects the naming convention of the text.
 * `"kebab-case"`
 * `"UPPER-KEBAB-CASE"`
 * `"Title Case"`
+* `"Train-Case"`
 * `"Unknown / Mixed"`
 
 ### Examples:
@@ -110,13 +114,25 @@ Naming.DetectNamingStyle("votes UsersDetails");  // Unknown / Mixed
 
 ---
 
-## 🔠 **ToPascalCase(string input)**
+## 🔠 **ToUpperCase(string input)**
+
+Converts from any format to UPPERCASE.
+
+---
+
+## 🔡 **ToLowerCase(string input)**
+
+Converts from any format to lowercase.
+
+---
+
+## 🧱 **ToPascalCase(string input)**
 
 Converts from any format to PascalCase.
 
 ---
 
-## 🔡 **ToCamelCase(string input)**
+## 🐪 **ToCamelCase(string input)**
 
 Converts from any format to camelCase.
 
@@ -128,9 +144,33 @@ Converts from any format to snake_case.
 
 ---
 
+## 🐍🔠 **ToScreamingSnakeCase(string input)**
+
+Converts from any format to SCREAMING_SNAKE_CASE.
+
+---
+
 ## 🔗 **ToKebabCase(string input)**
 
 Converts from any format to kebab-case.
+
+---
+
+## 🔗🔠 **ToUpperKebabCase(string input)**
+
+Converts from any format to UPPER-KEBAB-CASE.
+
+---
+
+## 🔤 **ToTitleCase(string input)**
+
+Converts from any format to Title Case.
+
+---
+
+## 🚂 **ToTrainCase(string input)**
+
+Converts from any format to Title Case.
 
 ---
 
@@ -141,6 +181,7 @@ Naming.ToPascalCase("hello-world");       // HelloWorld
 Naming.ToCamelCase("HELLO_WORLD");        // helloWorld
 Naming.ToSnakeCase("HelloWorld");         // hello_world
 Naming.ToKebabCase("helloWorldTest");     // hello-world-test
+Naming.ToTrainCase("helloWorldTest");     // Hello-World-Test
 
 Naming.DetectNamingStyle("MyVariable");   // PascalCase
 Naming.DetectNamingStyle("myVariable");   // camelCase
